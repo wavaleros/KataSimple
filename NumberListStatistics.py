@@ -1,15 +1,13 @@
 class NumberListStatistics:
-    number_list = []
+    list_legth = 0
 
     def __init__(self):
-        pass
+        self.list_legth = 0
 
-    def get_list_size(self):
-        return len(self.number_list)
-
-    def processString(self, input_list):
-        self.number_list = input_list.split(',')
-
+    def processString(self, input_list): 
+        for i in input_list.split(','):
+            if i != '':
+                self.list_legth = self.list_legth+1
 
 if __name__ == '__main__':
     print()
