@@ -70,3 +70,10 @@ class test_maximum_value(TestNumberListStatistics):
         value = "2,7,4,6,7,9,5"
         response = self.testedClass.processString(value)
         self.assertEqual(9, response[2])
+
+
+class test_mean_value(TestNumberListStatistics):
+
+    def test_return_minus_one_with_no_input(self):
+        response = self.testedClass.processString("")
+        self.assertEqual(-1, response[3])
