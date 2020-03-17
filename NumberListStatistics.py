@@ -14,6 +14,7 @@ class NumberListStatistics:
                 length = length + 1
                 if minimum == -1 or j < minimum:
                     minimum = j
+                maximum = j
 
         result[0] = length
         result[1] = minimum
