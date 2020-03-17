@@ -10,9 +10,11 @@ class NumberListStatistics:
         for i in input_list.split(','):
             if i != '':
                 length = length+1
+            if minimo == -1 or int(i) < minimo:
+                minimo = i
 
         result[0] = length
-        result[1] = minimo
+        result[1] = int(minimo)
         return result
 
 if __name__ == '__main__':
