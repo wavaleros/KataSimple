@@ -60,3 +60,8 @@ class test_maximum_value(TestNumberListStatistics):
     def test_return_the_same_value_with_one_input_value(self):
         response = self.testedClass.processString("3")
         self.assertEqual(3, response[2])
+
+    def test_return_the_maximum_value_with_two_input_values(self):
+        value = "2,1"
+        response = self.testedClass.processString(value)
+        self.assertEqual(2, response[2])
