@@ -6,7 +6,8 @@ class NumberListStatistics:
     def processString(self, input_list):
         length = 0
         minimum = -1
-        result = [length, minimum]
+        maximum = -1
+        result = [length, minimum, maximum]
         for i in input_list.split(','):
             if i != '':
                 j = int(i)
@@ -16,6 +17,7 @@ class NumberListStatistics:
 
         result[0] = length
         result[1] = minimum
+        result[2] = maximum
         return result
 
 
