@@ -34,3 +34,8 @@ class test_minimum_value(TestNumberListStatistics):
     def test_return_minus_one_with_no_input(self):
         response = self.testedClass.processString("")
         self.assertEqual(-1, response[1])
+
+    def test_return_the_same_value_with_one_value_input(self):
+        value = "2"
+        response = self.testedClass.processString(value)
+        self.assertEqual(value, response[1])
