@@ -7,7 +7,8 @@ class NumberListStatistics:
         length = 0
         minimum = -1
         maximum = -1
-        average = -1
+        average = -1.0
+        sum = 0
         result = [length, minimum, maximum, average]
         for i in input_list.split(','):
             if i != '':
@@ -17,7 +18,10 @@ class NumberListStatistics:
                     minimum = j
                 if maximum < j:
                     maximum = j
-                average = j / 1
+                sum = sum + j
+
+        if length > 0:
+            average = sum / length
 
         result[0] = length
         result[1] = minimum
