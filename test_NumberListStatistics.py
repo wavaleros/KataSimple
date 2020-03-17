@@ -86,3 +86,8 @@ class test_mean_value(TestNumberListStatistics):
         value = "2,1"
         response = self.testedClass.processString(value)
         self.assertEqual(1.5, response[3])
+
+    def test_return_the_mean_value_with_n_input_values(self):
+        value = "0,1,2,3,4,5,6,7,8,9,10"
+        response = self.testedClass.processString(value)
+        self.assertEqual(5.0, response[3])
