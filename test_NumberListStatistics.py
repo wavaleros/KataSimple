@@ -45,3 +45,8 @@ class test_minimum_value(TestNumberListStatistics):
         response = self.testedClass.processString(value)
         self.assertEqual(1, response[1])
 
+    def test_return_the_minimum_value_with_n_values(self):
+        value = "2,7,4,6,7,90"
+        response = self.testedClass.processString(value)
+        self.assertEqual(2, response[1])
+
