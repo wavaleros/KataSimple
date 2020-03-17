@@ -50,3 +50,8 @@ class test_minimum_value(TestNumberListStatistics):
         response = self.testedClass.processString(value)
         self.assertEqual(2, response[1])
 
+
+class test_maximum_value(TestNumberListStatistics):
+    def test_return_minus_one_with_no_input(self):
+        response = self.testedClass.processString("")
+        self.assertEqual(-1, response[2])
