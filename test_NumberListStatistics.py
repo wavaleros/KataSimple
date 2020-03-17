@@ -43,5 +43,5 @@ class test_minimum_value(TestNumberListStatistics):
     def test_return_the_minimum_value_with_two_input_values(self):
         value = "2,1"
         response = self.testedClass.processString(value)
-        self.assertEqual(2, response[1])
+        self.assertEqual(1, response[1])
 
