@@ -65,3 +65,8 @@ class test_maximum_value(TestNumberListStatistics):
         value = "2,1"
         response = self.testedClass.processString(value)
         self.assertEqual(2, response[2])
+
+    def test_return_the_maximum_value_with_n_values(self):
+        value = "2,7,4,6,7,9,5"
+        response = self.testedClass.processString(value)
+        self.assertEqual(9, response[2])
