@@ -77,6 +77,7 @@ class test_mean_value(TestNumberListStatistics):
     def test_return_minus_one_with_no_input(self):
         response = self.testedClass.processString("")
         self.assertEqual(-1, response[3])
+        
 
     def test_return_the_same_value_with_one_input_value(self):
         response = self.testedClass.processString("3")
