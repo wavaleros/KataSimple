@@ -4,11 +4,11 @@ from NumberListStatistics import NumberListStatistics
 
 
 class TestNumberListStatistics(TestCase):
-    
     testedClass = NumberListStatistics()
-     
+
     def setup(self):
         self.testedClass = NumberListStatistics()
+
 
 class test_number_list_size(TestNumberListStatistics):
 
@@ -19,3 +19,12 @@ class test_number_list_size(TestNumberListStatistics):
     def test_list_return_size_one(self):
         self.testedClass.processString("1")
         self.assertTrue(self.testedClass.list_legth == 1)
+
+    def test_list_return_size_two(self):
+        self.testedClass.processString("1,2")
+        self.assertTrue(self.testedClass.list_legth == 2)
+
+    def test_list_return_size_n(self):
+        input_list = "1,2,6,7,8,341234,1234"
+        self.testedClass.processString(input_list)
+        self.assertTrue(self.testedClass.list_legth == len(input_list.split(',')))
