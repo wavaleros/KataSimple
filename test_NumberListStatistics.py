@@ -52,7 +52,11 @@ class test_minimum_value(TestNumberListStatistics):
 
 
 class test_maximum_value(TestNumberListStatistics):
-    
+
     def test_return_minus_one_with_no_input(self):
         response = self.testedClass.processString("")
         self.assertEqual(-1, response[2])
+
+    def test_return_the_same_value_with_one_input_value(self):
+        response = self.testedClass.processString("3")
+        self.assertEqual(3, response[2])
